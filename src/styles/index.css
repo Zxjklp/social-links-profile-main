@@ -8,9 +8,7 @@
 
 :root {
   --Green: hsl(75, 94%, 57%);
-
   --White: hsl(0, 0%, 100%);
-
   --Grey-700: hsl(0, 0%, 20%);
   --Grey-800: hsl(0, 0%, 12%);
   --Grey-900: hsl(0, 0%, 8%);
@@ -31,18 +29,17 @@ body {
   background-color: var(--Grey-900);
   color: var(--White);
   font-family: "Inter", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.875rem; /* 14px */
   text-align: center;
   padding: 1rem;
   display: grid;
   place-items: center;
-  min-height: 100svh; /* Using svh to account for mobile browser UI changes */
 }
 
 .card {
   max-width: 24rem;
   background-color: var(--Grey-800);
-  padding: 2.5rem;
+  padding: 2.5rem; /* 40px */
   border-radius: 12px;
 }
 
@@ -53,7 +50,7 @@ body {
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* 24px */
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 0.25rem;
@@ -72,7 +69,7 @@ body {
 }
 
 .links {
-  max-width: 19rem;
+  max-width: 19rem; /* 304px */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -81,15 +78,31 @@ body {
 .link {
   background-color: var(--Grey-700);
   color: var(--White);
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   padding: 0.75rem 0;
   border-radius: 8px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  cursor: url("../../assets/images/hand-pointer.svg") 6 3, pointer;
+  cursor: url("../../assets/images/handcursor.svg") 6 3, pointer;
 }
 
 .link:hover {
   background-color: var(--Green);
   color: var(--Grey-700);
+}
+
+@media (min-width: 48rem) and (max-width: 89.9375rem) {
+  .card {
+    min-width: 28.5rem;
+  }
+
+  .links {
+    min-width: 23.5rem;
+  }
+}
+
+@media (max-width: 47.9375rem) {
+  .card {
+    padding: 1.5rem;
+  }
 }
