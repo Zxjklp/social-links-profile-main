@@ -2,7 +2,7 @@
   font-family: "Inter";
   src: url("../../assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
     format("truetype");
-  font-weight: 400, 600, 700;
+  font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 }
@@ -39,7 +39,7 @@ body {
 }
 
 .card {
-  max-width: 24rem;
+  max-width: 24rem; 
   background-color: var(--Grey-800);
   padding: 2.5rem;
   border-radius: 12px;
